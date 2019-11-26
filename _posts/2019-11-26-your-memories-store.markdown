@@ -23,11 +23,11 @@ img: main.png # Add image post (optional)
 
 - LOGIN
 
-![LOGIN](../assets/img/login.PNG)
+![LOGIN](../assets/img/login.png)
 
 - Sign-Up
 
-![Sign-UP](../assets/img/sign-up.PNG)
+![Sign-UP](../assets/img/sign-up.png)
 
 - Main Page
 
@@ -39,4 +39,4 @@ img: main.png # Add image post (optional)
 
 
 - Have_image
-![Have_IMG](../assets/img/have-image.PNG)
+![Have_IMG](../assets/img/have-image.png)
