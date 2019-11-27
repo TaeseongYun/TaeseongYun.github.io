@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SNS 프로젝트"
-date: 2019-11-26 12:51:20 +0300
+date: 2019-11-26 12:51:20 +0900
 description: JSP를 이용한 SNS프로젝트 # Add post description (optional)
 img: main.png # Add image post (optional)
 ---
@@ -34,9 +34,8 @@ img: main.png # Add image post (optional)
 ![Main_Page](../assets/img/main.png)
 
 - None Have Image
-  
+
 ![None_Have_IMG](../assets/img/non-have-img.png)
 
-
 - Have_image
-![Have_IMG](../assets/img/have-image.png)
+  ![Have_IMG](../assets/img/have-image.png)
