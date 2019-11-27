@@ -32,7 +32,7 @@ Presenter : Contract 에서 정의 된 Contract.Presenter를 상속받에서 구
 
 즉 Contract를 코드로보면 이러하다
 
-```Kotlin
+```kotlin
 interface ExampleContract {
     interface View {
 // 뷰에 대한 함수 정의
@@ -46,7 +46,7 @@ interface ExampleContract {
 
 그리고 Contract.View의 사용법은 이렇다. (해당 코드는 직접 사용한 코드를 들고왔다.)
 
-```Kotlin
+```kotlin
 class RepoStargazersActivity : BaseActivity(), RepoStarredUserListContract.View {
     override fun loadFailGithubApi() {
         toast("API 문서 호출 오류")
@@ -117,3 +117,5 @@ class RepoStargazersActivity : BaseActivity(), RepoStarredUserListContract.View 
     }
 }
 ```
+
+이상 MVP Pattern 에 대한 설명이었습니다.
