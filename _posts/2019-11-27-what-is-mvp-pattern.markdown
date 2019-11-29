@@ -32,25 +32,26 @@ Presenter : Contract 에서 정의 된 Contract.Presenter를 상속받에서 구
 
 즉 Contract를 코드로보면 이러하다
 
-```kotlin
+{% highlight kotlin %}
 interface ExampleContract {
-    interface View {
+interface View {
 // 뷰에 대한 함수 정의
-    }
+}
 
     interface Presenter {
+
 // 뷰이벤트 처리에 대한 함수 정의
-    }
 }
-```
+}
+{% endhighlight %}
 
 그리고 Contract.View의 사용법은 이렇다. (해당 코드는 직접 사용한 코드를 들고왔다.)
 
-```kotlin
+{% highlight kotlin %}
 class RepoStargazersActivity : BaseActivity(), RepoStarredUserListContract.View {
-    override fun loadFailGithubApi() {
-        toast("API 문서 호출 오류")
-    }
+override fun loadFailGithubApi() {
+toast("API 문서 호출 오류")
+}
 
     override fun loadFailGithubApi(message: String) {
         toast(message)
@@ -115,7 +116,8 @@ class RepoStargazersActivity : BaseActivity(), RepoStarredUserListContract.View 
             addOnScrollListener(onScrollRecyclerViewListener)
         }
     }
+
 }
-```
+{% endhighlight %}
 
 이상 MVP Pattern 에 대한 설명이었습니다.
