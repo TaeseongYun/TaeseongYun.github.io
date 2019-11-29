@@ -21,29 +21,39 @@ Django(장고)는 파이썬으로 만들어진 무료 오픈소스 웹 어플리
 python은 한 프로젝트에 한 가상환경을 해주어야 후에 충돌이 일어나는 경우가 매우 적어지기 때문에 가상환경에서 실행해준다. 다음 설치 방법은 맥os 기준이다.
 
 ```python
-우선 가상환경을 설치 해준다.
+#우선 가상환경을 설치 해준다.
 pip3 install virtualenv
 
-그 후 가상환경을 설정해줘야 한다.
+#그 후 가상환경을 설정해줘야 한다.
 python -m venv [설정하고싶은 가상환경이름]
 
-가상환경 실행
+#가상환경 실행
 source [설정한 가상환경 이름]/bin/activate
 
-가상환경에서 django 와 djangorestframework를 설치해준다.
+#가상환경에서 django 와 djangorestframework를 설치해준다.
 
 pip install django, pip install djangorestframework
 
-그 후 프로젝트와 앱을 하나 만들어준다.
+#그 후 프로젝트와 앱을 하나 만들어준다.
+
+#[]안에는 각각 설정할 프로젝트명과 설정할 앱 명을 넣는다
 django-admin startproject [설정할 프로젝트명]
 django-admin startapp [설정할 앱 명]
 
-만들어 준 프로젝트 안의 settings.py 파일안의 INSTALLED_APPS에는 'rest_framework'를 추가시키고
+# 만들어 준 프로젝트 안의 settings.py 파일안의 INSTALLED_APPS에는 'rest_framework'를 추가시키고
 
+INSTALLED_APPS = [
+    ... ,
+    # 이것 추가
+    'rest_framework',
+    ... ,
+]
+
+#요건 settings.py파일 제일 밑에 추가시켜준다.
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
-} 요건 settings.py파일 제일 밑에 추가시켜준다.
+}
 ```
 
 drf(Django-rest-framework)하면서 제일 헷갈렸던 부분이 urls 부븐인데 만들어줬던 앱 안에서는 urls.py파일을 새로 만들어주고 project에 include 시켜줘야한다.
