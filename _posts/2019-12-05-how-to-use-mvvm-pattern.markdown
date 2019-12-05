@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "안드로이드 MVVM 패턴"
-date: 2019-12-05 21:36:20 +0900
+date: 2019-12-05 21:36:20 GMT+0900
 description: 안드로이드 aac를 활용한 MVVM 패턴에 대한 설명 # Add post description (optional)
 img: MVVM.png # Add image post (optional)
 ---
@@ -19,7 +19,6 @@ DataBinding 을 사용하기 위해선 xml 파일에 layout이라는 태그를 �
 예시 코드는 다음과 같다
 
 {% highlight xml %}
-
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -49,7 +48,7 @@ DataBindingUtil.setContentView(this, R.layout.plain_activity)
 binding.name = "Your name"
 binding.lastName = "Your last name"
 
-{% endghighlight %}
+{% endhighlight %}
 
 **Binding 클래스 이름의 생성은 파스칼 표기법 기준으로 변경된다.
 예를 들어 super_main_activity.xml의 파일은 SuperMainActivityBinding 클래스를 생성한다.**
@@ -61,6 +60,6 @@ dataBinding에서 변수를 생성하는것은 다음과 같다
 <variable name="name" type="String"/>
 <variable name="lastName" type="String"/>
 </data>
-{% endghighlight %}
+{% endhighlight %}
 
 이상 MVVM에 대한 포스트를 마치겠습니다.
