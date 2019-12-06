@@ -3,7 +3,7 @@ layout: post
 title: "ViewModel 에러"
 date: 2019-12-06 21:51:20 +0900
 description: ViewModel 생성 시 일어날 수 있는 에러 # Add post description (optional)
-img: android-view-model.png # Add image post (optional)
+img: android-view-model.jpeg # Add image post (optional)
 ---
 
 ## ViewModel 객체 생성 시 일어날 수 있는 에러
