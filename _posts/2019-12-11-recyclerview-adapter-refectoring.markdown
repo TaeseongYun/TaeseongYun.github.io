@@ -134,4 +134,4 @@ BaseRecyclerAdapter<MovieResult>() {
 이상 RecyclerView Adapter 리펙토링 포스팅을 마치겠습니다.
 
 -참고 사이트
-링크 : [RecyclerView][recyclerlink] [recyclerLink]: https://thdev.tech/android/2018/01/31/Recycler-Adapter-Distinguish/
+링크 : [RecyclerView](https://thdev.tech/android/2018/01/31/Recycler-Adapter-Distinguish/).
