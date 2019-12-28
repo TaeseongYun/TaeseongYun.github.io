@@ -18,7 +18,8 @@ Room Database는 기존에 안드로이드에 있던 SQLite와는 다르게 어�
 
 각각의 생김새는 이러하다.
 
-{ %highlight kotlin% }
+{% highlight kotlin %}
+
 #Entity
 @Parcelize
 @Entity(primaryKeys = ["id"])
@@ -40,11 +41,10 @@ val title: String,
 val video: Boolean,
 val vote_average: Double,
 val vote_count: Int,
-
-    var isLike: Boolean
-
+var isLike: Boolean
 ): Parcelable
-{ %endhighlight% }
+
+{% endhighlight %}
 
 위에는 또 내가 처음 사용하게 된 Parcelable 이라는 클래스와 @Parcelize라는 어노테이션이 존재한다. Parcelable의 클래스는 안드로이드 개발자가 직렬화 하기 위해 사용하는 하나의 클래스라고 한다.
 참고는 [https://www.3pillarglobal.com/insights/parcelable-vs-java-serialization-in-android-app-development](https://www.3pillarglobal.com/insights/parcelable-vs-java-serialization-in-android-app-development) 여기서 하였다.
