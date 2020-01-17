@@ -6,8 +6,6 @@ description: RoomDatabase 적용기 # Add post description (optional)
 img: room-database.jpeg # Add image post (optional)
 ---
 
-Coordinator layout 즉 CollapsingToolbarLayout에 다시 익숙해지기 위해서 포스팅을 하게 되었다.
-
 ## Room Database?
 
 Room Database 대해여 자세히 알아가기 위해 android developer 홈페이지를 들어가 보았다.
