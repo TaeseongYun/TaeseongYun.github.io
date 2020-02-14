@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "inline function?"
-date: 2019-12-29 12:51:20 +0900
+date: 2020-01-17 12:51:20 +0900
 description: inline function에 대한 고찰 # Add post description (optional)
 img: inline-fun.jpg # Add image post (optional)
 ---
@@ -103,6 +103,8 @@ ex)
 이와같이 inline함수는 코드의 길이가 상당히 급격하게 길어지게 됩니다. 디컴파일하기 전 코드가 짧은 함수에만 사용하는것을 권장하는듯 했습니다.
 
 noinline은 inline 키워드를 사용했지만 인라인을 사용하고싶지 않을 때 정하는 키워드입니다.
+
+crossinline은 inline 키워드를 사용한 함수 몸체에서 해당 고차함수를 inline카워드를 붙힌 함수 몸체에서 직접적으로 호출하지 않고 inline 함수 몸체에서 다른 실행 컨텍스트(로컬객체, 중첩함수) 에서 호출이 될때 crossinline 키워드를 사용한다.
 후에 inline에 대해 여러 지식을 습득하게 되면 추가로 포스팅 하겠습니다.
 
 이상 inline 함수 포스팅을 마치도록 하겠습니다.
