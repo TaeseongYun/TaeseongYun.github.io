@@ -11,8 +11,11 @@ img: inline-fun.jpg # Add image post (optional)
 ## inline 함수?
 
 보통 고차함수라고 함은 파라미터를 함수로 가지는 함수를 말합니다.
+
 ex)
+
 {% highlight kotlin %}
+
 private fun setReactiveButton(isCart: Boolean, reactButton: (addCart: Button, buyButton: Button) -> Unit) {
 when (isCart) {
 true -> {
@@ -23,6 +26,7 @@ false -> {
 }
 }
 }
+
 {% endhighlight %}
 
 
@@ -32,16 +36,19 @@ false -> {
 
 
 {% highlight kotlin %}
+
 private fun loadReactiveButton() {
 setReactiveButton(intent.getBooleanExtra(ADD_CART, false)) { addCart, buyButton ->
 anything...
 }
 }
+
 {% endhighlight %}
 
 이 때 setReactiveButton를 사용하는 함수 loadReactiveButton()를 디컴파일 해보면 다음과 같이 코드가 생성됩니다.
 
 {% highlight kotlin %}
+
 private final void loadReactiveButton() {
 this.setReactiveButton(this.getIntent().getBooleanExtra("add-cart", false), (Function2)(new Function2() {
 // $FF: synthetic method
@@ -52,6 +59,7 @@ return Unit.INSTANCE;
 }
 }
 }
+
 {% endhighlight %}
 
 이처럼 고차함수 즉 파라미터로 함수를 function으로 많이 받을 경우 Function 오브젝트가 계속해서 생겨나게됩니다.
@@ -60,6 +68,7 @@ return Unit.INSTANCE;
 
 
 {% highlight kotlin %}
+
 private final void loadReactiveButton() {
 boolean isCart$iv = this.getIntent().getBooleanExtra("add-cart", false);
       int $i$f$setReactiveButton = false;

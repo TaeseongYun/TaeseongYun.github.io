@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to use android jetpack?"
-date: 2020-01-19 12:51:20 +0900
+date: 2020-02-26 12:51:20 +0900
 description: 안드로이드 JetPack 사용기 # Add post description (optional)
 img: android-jetpack.png # Add image post (optional)
 ---
