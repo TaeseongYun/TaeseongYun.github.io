@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RoomDatabase 적용"
-date: 2019-12-29 12:51:20 +0900
+date: 2019-12-19 12:51:20 +0900
 description: RoomDatabase 적용기 # Add post description (optional)
 img: room-database.jpeg # Add image post (optional)
 ---

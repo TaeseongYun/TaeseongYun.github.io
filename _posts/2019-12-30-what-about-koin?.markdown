@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Koin 프로젝트 적용"
-date: 2019-11-26 12:51:20 +0900
+date: 2019-12-30 12:51:20 +0900
 description: Koin 프로젝트 적용 # Add post description (optional)
 img: koin.png # Add image post (optional)
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "inline function?"
-date: 2019-12-29 12:51:20 +0900
+date: 2020-01-17 12:51:20 +0900
 description: inline function에 대한 고찰 # Add post description (optional)
 img: inline-fun.jpg # Add image post (optional)
 ---
