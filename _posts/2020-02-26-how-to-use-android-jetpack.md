@@ -32,6 +32,7 @@ img: android-jetpack.png # Add image post (optional)
 네이게이션 사용 전 코드 )
 
 {% highlight kotlin %}
+
 movieFragment.setFragment()
 
 bottom_sheet_menu.setupWithNavController(bottom_sheet_menu, R.id.nav_graph)
@@ -58,15 +59,19 @@ searchViewModel.onShowProgressBar = {
     frameLayout.visibility = View.GONE
     loading_progress.visibility = View.VISIBLE
 }
+
 {% endhighlight %}
 
 변경 후 코드)
+
 {% highlight kotlin %}
+
 navFragmentHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment?
 
 navFragmentHost?.let {
     NavigationUI.setupWithNavController(bottom_sheet_menu, it.navController)
 }
+
 {% endhighlight %}
 
 네비게이션 중 가장 중요한것이 NavigationHost `NavigationHost`은 사용자가 앱을 탐색할 때 대상이 바뀌거나 빈 컨테이터를 의미.
