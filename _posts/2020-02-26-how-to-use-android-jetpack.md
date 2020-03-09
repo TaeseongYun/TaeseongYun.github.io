@@ -36,28 +36,28 @@ img: android-jetpack.png # Add image post (optional)
 movieFragment.setFragment()
 
 bottom_sheet_menu.setupWithNavController(bottom_sheet_menu, R.id.nav_graph)
-        bottom_sheet_menu.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.movie_fragment -> {
-                    movieFragment.setFragment()
-                    true
-                }
-                R.id.tv_fragment -> {
-                    tvFragment.setFragment()
-                    true
-                }
-                R.id.star_fragment -> {
-                    starFragment.setFragment()
-                    true
-                }
+bottom_sheet_menu.setOnNavigationItemSelectedListener { menuItem ->
+when (menuItem.itemId) {
+R.id.movie_fragment -> {
+movieFragment.setFragment()
+true
+}
+R.id.tv_fragment -> {
+tvFragment.setFragment()
+true
+}
+R.id.star_fragment -> {
+starFragment.setFragment()
+true
+}
 
                 else -> false
             }
         }
 
 searchViewModel.onShowProgressBar = {
-    frameLayout.visibility = View.GONE
-    loading_progress.visibility = View.VISIBLE
+frameLayout.visibility = View.GONE
+loading_progress.visibility = View.VISIBLE
 }
 
 {% endhighlight %}
@@ -69,7 +69,7 @@ searchViewModel.onShowProgressBar = {
 navFragmentHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment?
 
 navFragmentHost?.let {
-    NavigationUI.setupWithNavController(bottom_sheet_menu, it.navController)
+NavigationUI.setupWithNavController(bottom_sheet_menu, it.navController)
 }
 
 {% endhighlight %}
@@ -77,3 +77,4 @@ navFragmentHost?.let {
 네비게이션 중 가장 중요한것이 NavigationHost `NavigationHost`은 사용자가 앱을 탐색할 때 대상이 바뀌거나 빈 컨테이터를 의미.
 
 NavHostFragment 가 NavigationHostFragment를 의미하는것 같음.
+여러번의 구글링을 통해 activity to activity 하는 방법이 없나 싶어 검색을 하다가 우연히 블로그 하나를 발견하게 되고 그곳에선 Navigation은 activity 안에서 multi fragment 지원이 대부분이고 그로 인해 activity 만 탐석하는것은 이점이 매우 적다 라고 말을 하고 있었다. 딥링크도 지원 가능하다고 한다.
