@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "inline function?"
+title: "What is livedata?"
 date: 2020-01-19 12:51:20 +0900
 description: LiveData와 object 키워드 # Add post description (optional)
-img: livedata.jpg # Add image post (optional)
+img: livedata.png # Add image post (optional)
 ---
 
 ## LiveData란 무엇인가??

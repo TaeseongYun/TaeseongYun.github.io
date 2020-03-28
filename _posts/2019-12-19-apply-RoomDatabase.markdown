@@ -58,11 +58,25 @@ An automatic Parcelable implementation generator. Declare the serialized propert
 
 언제부터인가 Room 데이터베이스를 사용하다보면 계속해서 컨버터 오류가 났었다.
 ![컨버터오류](../assets/img/convertError.png)
-여러 페이지에 검색을 해보니 해당 오류는 일반적인 오류라고 한다. Room 데이터베이스는 직접 저장하는기능에서 변환 기능이 따로 존재하지 않기때문에 List같은 경우는 List 제네릭 형에 맞춰서 컨버터를 제작해야한다고 나와있었다.
+여러 페이지에 검색을 해보니 해당 오류는 일반적인 오류라고 한다.
+
+Room 데이터베이스는 직접 저장하는기능에서 변환 기능이 따로 존재하지 않기때문에 List같은 경우는 List 제네릭 형에 맞춰서 컨버터를 제작해야한다고 나와있었다.
+
 참고하여 만들어준 컨버터 클래스는 다음과 같다.
 ![컨버터 클래스](../assets/img/IntegerConvert.png)
 
-후에 Room Database에 공부한것이 더 생기면 추가해서 포스팅하도록 하겠습니다.
+해당 룸 컨버터를 자세히 알아가기 위해 Android 디벨로퍼 홈페이지와 TypeToken 이 어떤 클래스인지 알아보았다.
+
+컨버터를 작성하기 위해선 처음엔 어노테이션인 @TypeConverter를 붙혀줘야하고,
+
+Gson(구글에서 제공하는 json 변환(직렬화, 역직렬화) 클래스)의 type
+
+즉 변환해야 할 타입의 토큰을 알아야한다. 정확한 이유가 맞는진 모르겠지만 type 은 TypeToken 제네릭에서 구분하는 것으로 보인다.
+
+요약
+
+- Room 데이터베이스는 기존에 SQLite 보다 구현하기 쉽도록 Jetpack에 잘 나와있고 어노테이션으로 @Entity, @Dao, @Query, @Insert, @Delete 등 사용 가능하다.
+- Room 으로 기존의 간단한 String, int, float 등 기존 타입은 가능하지만 Parcelize형의 클래스는 따로 컨버터가 있어야 한다. @TypeConverter 어노테이션으로 지정.
 
 참고자료
 
