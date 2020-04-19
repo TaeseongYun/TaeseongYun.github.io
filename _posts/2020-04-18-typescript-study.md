@@ -36,6 +36,8 @@ img: redux.png # Add image post (optional)
   이 때 type은 고유한 값이어야 합니다.
 
   ex)
+  
+  ### 리턴되는값은 전부 action에 해당됍니다.
 
   ```javascript
   function addTodo({ title, priority }) {
@@ -64,3 +66,43 @@ img: redux.png # Add image post (optional)
 
   ~~~
   ```
+## 1-4 dispatch의 역할?
+
+- redux를 공부 중 가장 많이 듣게되는 함수에는 subscribe, dispatch, getState함수가 있는데 그중 dispatch에 대해 알아보겠습니다.
+
+### dispatch
+ - 쉽게 말해서 dispatch를 호출하게 되면 reducer를 호출하게 됍니다. reducer는 두 가지의 매개변수를 받게되는데 하나는 이전상태값 (state)과 디스패치에서 들어온 action값을 매개변수로 받는다 action 값이라하면(새로운 오브젝트) 위에서 예시를 들어놓았습니다.
+
+
+dispatch ex)
+
+```javascript
+const store = createStore()
+
+store.dispath({type: 'LOGIN'})
+```
+
+
+여기선 {type: 'LOGIN'}이 액션이 된다.
+
+### reducer
+
+- 리듀서란 위에 디스패치에서 짧게 설명했지만 2개의 매개변수를 받는 함수.
+   
+   1. 이전상태의 state
+
+  2. dispatch에서 전달 해주었던 action
+
+ex)
+
+```javascript
+const reducer = (state = {}, action) => {
+  switch(action.type) {
+    case 'LOGIN': {
+      newState = state.assign({}, {hello: 'world'})
+      return newState
+    }
+  }
+}
+```
+* 리듀서에서 가장 중요한점은 리듀서에서 state를 리턴시킬 때 매개변수로 받은 state를 리턴 시키지 말고 복제본 (assign or ...(스프레드 연산자))로 복제 후 복제한 state를 리턴시켜야 합니다.
