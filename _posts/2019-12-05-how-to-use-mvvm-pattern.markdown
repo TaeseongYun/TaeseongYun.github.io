@@ -13,12 +13,17 @@ img: MVVM.png # Add image post (optional)
 ![MVVM패턴](../assets/img/MVVM.png)
 안드로이드 뿐만아니라 다른곳에서 이용되는 MVVM 패턴은 Model-View-ViewModel 의 약자이다. View는 영어 그대로 UI를 의미하고 ViewModeld은 이벤트처리, Model과의 관계 Model은 비즈니스 로직을 담당한다. 여기서 안드로이드 이전 패턴들을 살펴보면 MVC, MVP 가 있는데 마치 이것은 이번 MVVM도 VM(ViewModel)이 중요하게 생각하도록 만드는데 VM이 아니라 DataBinding에 강점을 두고있다.
 
+첫 포스팅 할 당시엔 AAC ViewModel과 MVVM ViewModel은 동일한것으로 알고있었다. 하지만 동일한것이 아니고 AAC 의 ViewModel은 Lifecycle에 대응하는 데이터 저장을 위한 클래스이고 MVVM의 ViewModel은 View에 대한 데이터를 들고 있고 View는 그 데이터를 관찰하는것으로 관리하는것이다.
+
+### 즉 View는 ViewModel의 데이터를 계속해서 observe 하고 있고 바뀌는 즉시 UI에 바뀐 데이터를 뿌려주는 형태이다.
+
 ## DataBinding?
 
 DataBinding 을 사용하기 위해선 xml 파일에 layout이라는 태그를 최상단에 추가 해 준다
 예시 코드는 다음과 같다
 
 {% highlight xml %}
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
